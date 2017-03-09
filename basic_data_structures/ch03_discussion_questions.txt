@@ -1,0 +1,20 @@
+"Discussion Questions"
+
+1. 0, 1, 1
+
+2.
+    a. +*(AB) +* (CD) + (EF)
+    b. +A(*(+BC)(+DE))
+    c. *A *B *C +D +EF
+
+3. 
+    a.(AB+)(CD+)*(EF+)*
+    b.A((BC+)(DE+)*)+
+    c.AB* C* D* E+ F+
+
+4. 
+    a. '('  to  '+ ('  to  '+ ( *'  to  ' *'  to  '* ( *'  to  '*';
+
+    b. ' +'  to  '(  + ' to '( ( +'  to   '+ ( ( +' to '( +' to '* ( +' to '( * ( +' to '+ ( * ( +' to '* ( +' to '+'
+
+    c. '*' to '*' to '*' to '+' to '+'
