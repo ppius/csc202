@@ -26,7 +26,9 @@ def par_checker(symbol_str):
         if symbol == '(':
             s.push(symbol)
         else:
-            if s.is_empty():
+            if symbol != '(' and symbol != ')':
+                None
+            elif s.is_empty():
                 balanced = False
             else:
                 s.pop()
