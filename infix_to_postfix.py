@@ -89,9 +89,9 @@ def eval_infix(expr):
       '933'
     """
 
-    postfix = infix_to_postifx(expr)
-    #result = eval_postfix(postfix)
-    #return result
+    postfix = infix_to_postfix(expr)
+    result = eval_postfix(postfix)
+    return result
 
 
 if __name__ == '__main__':
