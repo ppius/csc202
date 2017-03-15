@@ -1,7 +1,6 @@
 from string import ascii_uppercase, digits
 from linear_adts import Stack
 from par_checker import par_checker
-#from [filename] import *
 
 def infix_to_postfix(expr):
     """
