@@ -1,6 +1,7 @@
 from string import ascii_uppercase, digits
 from linear_adts import Stack
-
+from par_checker import par_checker
+#from [filename] import *
 
 def infix_to_postfix(expr):
     """
@@ -15,26 +16,13 @@ def infix_to_postfix(expr):
       'Invalid Expression'
       >>> infix_to_postfix(') 5 ( 7')
       'Invalid Expression'
+      >>> infix_to_postfix('55 * 2')
+      '55 2 *'
     """
 
-    balanced = True
-    index = 0
-
-    while index < len(expr) and balanced:
-        s = Stack()
-        char = expr[index]
-        if char == '(':
-            s.push(char)
-        else:
-            if char != '(' and char != ')':
-                None
-            elif s.is_empty():
-                balanced = False
-            else:
-                s.pop()
-        index += 1
-
-    return balanced and s.is_empty()
+    boo = par_checker(expr)
+    if boo is not True:
+        return 'Invalid Expression' 
 
     prec = {}
     prec['*'] = 3
@@ -48,7 +36,7 @@ def infix_to_postfix(expr):
     
     
     for token in token_list:
-        if token in ascii_uppercase or token in digits:
+        if token in ascii_uppercase or token[:1] in digits:
             postfix_list.append(token)
         elif token == '(':
             op_stack.push(token)
@@ -67,6 +55,43 @@ def infix_to_postfix(expr):
         postfix_list.append(op_stack.pop())
 
     return ' '.join(postfix_list)
+
+
+def eval_postfix(expr):
+    """
+    Evaluate a numerical postfix expression.
+      >>> eval_postfix('3 2 +')
+      '5'
+      >>> eval_postfix('3 2 + 11 *')
+      '55'
+    """
+    op_stack = Stack()
+    token_list = expr.split()
+
+    for token in token_list:
+        if token[0] in digits:
+            op_stack.push(token)
+        else:
+            op2 = op_stack.pop()
+            op1 = op_stack.pop()
+            op_stack.push(str(eval(op1 + token + op2)))
+    return op_stack.pop()
+
+
+
+def eval_infix(expr):
+    """
+    Evaluate a numerical infix expression using infix_to_postfix and
+    eval_postfix.
+      >>> eval_infix('3 + 2')
+      '5'
+      >>> eval_infix('311 * 3')
+      '933'
+    """
+
+    postfix = infix_to_postifx(expr)
+    #result = eval_postfix(postfix)
+    #return result
 
 
 if __name__ == '__main__':
