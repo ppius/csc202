@@ -24,3 +24,4 @@ Discussion Questions
     b. '1'  '21'  '3'  '33'  '6'  '46'  '10'  '510'  '15' 
     c. '1'  '21'  '321'  '4321'  '54321'  '21605' '75926' '1640381230' '1640457156'
 
+6. I believe the big-O performance would reverse because the the rear is no longer where the elements are being enqueued, instead it is where it is dequeued and would act more like a the Stack data structure. 
