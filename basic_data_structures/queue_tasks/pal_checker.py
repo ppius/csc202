@@ -29,3 +29,5 @@ def pal_checker(a_string):
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
+
+#passed the tests :)
