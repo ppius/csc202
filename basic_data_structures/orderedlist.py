@@ -66,14 +66,14 @@ class OrderedList:
 
     def search(self, item):
         if self.isEmpty():
-        current = self.head
-        index = 0
+            current = self.head
+            index = 0
         while not (current is None):
             if current.getData() == key:
                 return index
-            elif key < current.getData():
+            elif item < current.get_data():
                 break
-            current = current.getNext()
+            current = current.get_next()
             index += 1
         return -1
 
@@ -82,14 +82,14 @@ class OrderedList:
         count = 0
         while not (current is None):
             count += 1
-            current = current.getNext()
+            current = current.get_next()
         return count
 
-    def add(self, data):
+    def add(self, item):
         current = self.head
         prev = None
         while not (current is None):
-            if current.get_data() > data:
+            if current.get_data() > item:
                 break
             else:
                 prev = current
