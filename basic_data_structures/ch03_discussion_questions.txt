@@ -25,3 +25,9 @@ Discussion Questions
     c. '1'  '21'  '321'  '4321'  '54321'  '21605' '75926' '1640381230' '1640457156'
 
 6. I believe the big-O performance would reverse because the the rear is no longer where the elements are being enqueued, instead it is where it is dequeued and would act more like a the Stack data structure. 
+
+
+8. Removing a node from the end of the list required the preceding node to become the new end of the list.
+
+9. When there is only one node, we need to make sure the cases of beginning or end can handle removing the single node. If not, we need to make a new case.
+
