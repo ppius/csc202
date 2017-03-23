@@ -18,7 +18,6 @@ class OrderedList:
 
     def popPos(self, key):
         if self.isEmpty():
-            print ("List is EMPTY!")
             return False
         front = self.head
         prev = None
@@ -46,7 +45,6 @@ class OrderedList:
 
     def pop(self):
         if self.isEmpty():
-            print ("List is EMPTY!")
             return None
 
         # check if the list has single node

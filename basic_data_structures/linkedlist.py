@@ -8,10 +8,10 @@ class LinkedList:
         self.N = 0
 
     def __str__(self):
-        llist = []
+        linked_list = []
         curr = self.head
         while curr is not None:
-            llist.append(curr.data)
+            linlist.append(curr.data)
             curr = curr.next
         print (llist)
 

@@ -44,16 +44,3 @@ def radixSort(nums):
     while not mainQ.is_empty():
         result.append(mainQ.dequeue())
     return result
-
-
-def readInput():
-    while True:
-        print ("Enter comma separated numbers: ")
-        data = input()
-        data = data.split(",")
-        try:
-            nums = [d.strip() for d in data]
-            break
-        except ValueError:
-            print ("Bad input, plz try again..")
-    return nums
