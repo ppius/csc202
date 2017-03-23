@@ -1,5 +1,5 @@
 from string import ascii_uppercase, digits
-from linear_adts import Stack
+from stack import Stack
 from par_checker import par_checker
 
 def infix_to_postfix(expr):
