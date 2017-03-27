@@ -1,0 +1,5 @@
+#Self-check
+1. How many recursive calls are made when computing the sum of the lsit[2, 4, 6, 8, 10]?
+Ans: 3
+
+2. Ans: n == 1 #see factorial.py for code
