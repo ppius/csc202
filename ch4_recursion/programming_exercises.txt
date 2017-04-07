@@ -1,0 +1,7 @@
+1. Write a recursive function to compute the factorial of a number.
+#refer to factorial.py 
+
+2.Write a recursive function to reverse a list.
+#refer to list_reverse.py
+
+3. Modify the recursive tree program using one or all of the following ideas:
